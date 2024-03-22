@@ -1,4 +1,4 @@
-window.addEventListener("load", function () {
+$(function () {
     elemekElerese1();
     elemekElerese2();
     elemekElerese3();
@@ -9,39 +9,43 @@ window.addEventListener("load", function () {
 
 function elemekElerese1() {
     /* Ide jön az 1. feladat */
-    const ELEM = document.querySelectorAll("section h2")[0]
-    ELEM.innerHTML
+    let ELEM = $("#f1").html()
     console.log(ELEM)
 }
 
 function elemekElerese2() {
-    /* Ide jön az 2. feladat */
-    const ELEM = document.getElementById("ide")
-    ELEM.innerHTML = "<p>Jó reggelt!</p>"
+    /* Ide jön a 2. feladat */
+    const ELEM = $("#ide");
+    ELEM.html("Jó reggelt!");
 }
 
 function elemekElerese3() {
-    /* Ide jön az 3. feladat */
-    const ELEM = document.querySelectorAll(".ide")[0]
-    ELEM.innerHTML = "<p>Jó reggelt!</p>"
+    /* Ide jön a 3. feladat */
+    const ELEM = $(".ide"); 
+    ELEM.html("<p>Jó reggelt!</p>");
 }
 
 function elemekElerese4() {
-    /* Ide jön az 4. feladat */
-    const ELEM = document.getElementsByClassName("lista")[0]
-    let txt = `<ul>`
+    /* Ide jön a 4. feladat */
+    const ELEM = $(".lista");
+    let txt = "<ul>"
     for (let index = 0; index < 5; index++) {
-        randomSzam = Math.floor(Math.random()*20)+10;
+        randomSzam = Math.floor(Math.random()*20) + 10;
         txt += `<li>${randomSzam}</li>`
     }
     txt += "</ul>"
-    ELEM.innerHTML = txt;
+    ELEM.html(txt);
 }
 
 function elemekFormazasa1() {
     /* Ide jön az 5. feladat */
-    const ELEM = document.getElementsByClassName("lista")[0];
-    ELEM.classList.add("formazott")
+    const ELEM = $(".lista");
+    ELEM.addClass("formazott");
 }
 
-//function esemenyKezeles1() {}
+/* function esemenyKezeles1() {
+    const ELEM = $("section lista")
+    ELEM.on("click", function () {
+
+    })
+} */
